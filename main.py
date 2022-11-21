@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+def print_by_key(london_co):
+	key = input('Введите имя усройства :')
+	print(london_co[key])
+
 london_co = {
     "r1": {
         "location": "21 New Globe Walk",
@@ -25,3 +29,5 @@ london_co = {
         "routing": True
     }
 }
+
+print_by_key(london_co)
