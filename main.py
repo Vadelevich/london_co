@@ -2,7 +2,8 @@
 
 def print_by_key(london_co):
 	key = input('Введите имя усройства :')
-	print(london_co[key])
+	values = input('Введите имя параметра :')
+	print(london_co[key][values])
 
 london_co = {
     "r1": {
