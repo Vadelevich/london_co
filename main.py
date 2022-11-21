@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 
 def print_by_key(london_co):
-	key = input('Введите имя усройства :')
-	values = input('Введите имя параметра :')
-	print(london_co[key][values])
+    key = input('Введите имя усройства :')
+    new_values = [ x for x in london_co[key].keys()]
+    new_values = ','.join(new_values)
+    values = input(f'Введите имя параметра ({new_values}) :').lower()
+    if values  not in new_values :print ('Такого параметра нет')
+    else :print(london_co[key][values])
 
 london_co = {
     "r1": {
